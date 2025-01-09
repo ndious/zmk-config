@@ -9,10 +9,19 @@
 
 / {
     behaviors {
-        ctrl_or_escape: ctrl_or_escape {
+        tap_or_hold: tap_or_hold {
             compatible = "zmk,behavior-hold-tap";
-            label = "CTRL_OR_ESCAPE";
+            label = "TAP_OR_HOLD";
             bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        tap_or_mod: tap_or_mod {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAP_OR_MOD";
+            bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -30,10 +39,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB                       &kp Q  &kp W  &kp E  &kp R         &kp T        &kp Y      &kp U          &kp I          &kp O    &kp P     &none
-&ctrl_or_escape LCTRL ESCAPE  &kp A  &kp S  &kp D  &kp F         &kp G        &kp H      &kp J          &kp K          &kp L    &kp SEMI  &kp SQT
-&kp LSHFT                     &kp Z  &kp X  &kp C  &kp V         &kp B        &kp N      &kp M          &kp COMMA      &kp DOT  &kp FSLH  &mo 1
-                                            &mo 2  &kp LEFT_WIN  &kp SPACE    &kp SPACE  &kp RIGHT_ALT  &kp BACKSPACE
+&kp TAB                    &kp Q  &kp W  &kp E  &kp R         &kp T        &kp Y      &kp U          &kp I          &kp O    &kp P     &none
+&tap_or_hold LCTRL ESCAPE  &kp A  &kp S  &kp D  &kp F         &kp G        &kp H      &kp J          &kp K          &kp L    &kp SEMI  &kp SQT
+&kp LSHFT                  &kp Z  &kp X  &kp C  &kp V         &kp B        &kp N      &kp M          &kp COMMA      &kp DOT  &kp FSLH  &tap_or_mod 1 BACKSPACE
+                                         &mo 2  &kp LEFT_WIN  &kp SPACE    &kp SPACE  &kp RIGHT_ALT  &kp BACKSPACE
             >;
         };
 
@@ -63,7 +72,7 @@
 &kp TAB         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4   &kp N5       &kp NUMBER_6  &kp NUMBER_7  &kp N8         &kp N9            &kp N0             &none
 &trans          &trans        &kp MINUS     &kp EQUAL     &kp BACKSLASH  &kp GRAVE    &kp MINUS     &kp EQUAL     &kp BACKSLASH  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp GRAVE
 &kp LEFT_SHIFT  &trans        &trans        &trans        &trans         &trans       &trans        &trans        &trans         &trans            &trans             &trans
-                                            &trans        &trans         &kp SPACE    &kp RET       &trans        &kp RALT
+                                            &trans        &trans         &kp SPACE    &kp RET       &trans        &kp DEL
             >;
         };
     };
