@@ -39,10 +39,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB                    &kp Q  &kp W  &kp E  &kp R         &kp T        &kp Y      &kp U          &kp I          &kp O    &kp P     &none
-&tap_or_hold LCTRL ESCAPE  &kp A  &kp S  &kp D  &kp F         &kp G        &kp H      &kp J          &kp K          &kp L    &kp SEMI  &kp SQT
-&kp LSHFT                  &kp Z  &kp X  &kp C  &kp V         &kp B        &kp N      &kp M          &kp COMMA      &kp DOT  &kp FSLH  &tap_or_mod 1 BACKSPACE
-                                         &mo 2  &kp LEFT_WIN  &kp SPACE    &kp SPACE  &kp RIGHT_ALT  &kp BACKSPACE
+&kp TAB                    &kp Q  &kp W  &kp E         &kp R  &kp T        &kp Y      &kp U  &kp I          &kp O    &kp P     &none
+&tap_or_hold LCTRL ESCAPE  &kp A  &kp S  &kp D         &kp F  &kp G        &kp H      &kp J  &kp K          &kp L    &kp SEMI  &kp SQT
+&kp LSHFT                  &kp Z  &kp X  &kp C         &kp V  &kp B        &kp N      &kp M  &kp COMMA      &kp DOT  &kp FSLH  &tap_or_mod 1 BACKSPACE
+                                         &kp LEFT_WIN  &mo 2  &kp SPACE    &kp SPACE  &mo 2  &kp RIGHT_ALT
             >;
         };
 
@@ -54,10 +54,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp F1  &kp F2    &kp F3         &kp F4       &kp F5           &kp F6     &kp F7         &kp F8         &kp F9            &kp F10       &none
-&trans     &trans  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END          &kp LEFT   &kp DOWN       &kp UP         &kp RIGHT         &kp COLON     &kp DOUBLE_QUOTES
-&kp LSHFT  &trans  &trans    &trans         &trans       &trans           &trans     &trans         &kp LESS_THAN  &kp GREATER_THAN  &kp QUESTION  &none
-                             &trans         &trans       &kp BACKSPACE    &kp ENTER  &kp RIGHT_ALT  &kp DELETE
+&kp TAB    &kp F1  &kp F2    &kp F3         &kp F4       &kp F5           &kp F6     &kp F7    &kp F8         &kp F9            &kp F10       &none
+&trans     &trans  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END          &kp LEFT   &kp DOWN  &kp UP         &kp RIGHT         &kp COLON     &kp DOUBLE_QUOTES
+&kp LSHFT  &trans  &trans    &trans         &trans       &trans           &trans     &trans    &kp LESS_THAN  &kp GREATER_THAN  &kp QUESTION  &none
+                             &trans         &trans       &kp BACKSPACE    &kp ENTER  &trans    &kp DELETE
             >;
         };
 
@@ -69,9 +69,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4   &kp N5       &kp NUMBER_6  &kp NUMBER_7  &kp N8         &kp N9            &kp N0             &none
+&none           &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4   &kp N5       &kp NUMBER_6  &kp NUMBER_7  &kp N8         &kp N9            &kp N0             &none
 &trans          &trans        &kp MINUS     &kp EQUAL     &kp BACKSLASH  &kp GRAVE    &kp MINUS     &kp EQUAL     &kp BACKSLASH  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp GRAVE
-&kp LEFT_SHIFT  &trans        &trans        &trans        &trans         &trans       &trans        &trans        &trans         &trans            &trans             &trans
+&kp LEFT_SHIFT  &trans        &trans        &trans        &trans         &trans       &trans        &trans        &trans         &trans            &trans             &kp BACKSPACE
                                             &trans        &trans         &kp SPACE    &kp RET       &trans        &kp DEL
             >;
         };
